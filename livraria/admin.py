@@ -1,5 +1,5 @@
 from django.contrib import admin
-from livraris.models import livros, categoria
+from livraria.models import livros, categoria
 
 class LivrosAdmin (admin.ModelAdmin):
     list_display = ('id', 'Titulo', 'Autor', 'Editora', 'Data_Publicacao')
@@ -16,7 +16,6 @@ class CategoriaAdmin (admin.ModelAdmin):
     search_fields = ('Genero',)
 
 
-admin.site.register (Categoria, CategoriaAdmin)
-
+admin.site.register (categoria, CategoriaAdmin)
 
 # Register your models here.
