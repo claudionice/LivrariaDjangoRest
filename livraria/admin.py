@@ -1,21 +1,21 @@
 from django.contrib import admin
-from livraria.models import livros, categoria
+from livraria.models import Livro, Categoria
 
 class LivrosAdmin (admin.ModelAdmin):
-    list_display = ('id', 'Titulo', 'Autor', 'Editora', 'Data_Publicacao')
-    list_display = ('id', 'Titulo')
-    search_fields = ('Titulo',)
+    list_display = ('id', 'titulo', 'autor', 'editora', 'data_publicacao')
+    list_display = ('id', 'titulo')
+    search_fields = ('titulo',)
     list_per_page = 20
 
-admin.site.register (livros, LivrosAdmin)
+admin.site.register (Livro, LivrosAdmin)
 
 
 
 class CategoriaAdmin (admin.ModelAdmin):
-    list_display = ('id', 'Genero', 'Contra_Capa')
-    search_fields = ('Genero',)
+    list_display = ('id', 'genero', 'contra_capa')
+    search_fields = ('genero',)
 
 
-admin.site.register (categoria, CategoriaAdmin)
+admin.site.register (Categoria, CategoriaAdmin)
 
 # Register your models here.
